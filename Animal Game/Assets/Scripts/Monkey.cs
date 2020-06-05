@@ -5,20 +5,19 @@ using UnityEngine;
 public class Monkey : Creature
 {
 
-    protected override void Talk()
+    public override void Talk()
     {
         Debug.Log("I am a Monkey");
     }
 
 
+    public override void Jump()
+    {
 
-
-
-
-
-
-
-
+        
+            verticalVelocity = 2.0f;
+        
+    }
 
 
 

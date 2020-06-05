@@ -4,9 +4,9 @@ using UnityEngine;
 
 public abstract class Creature : MonoBehaviour
 {
-    public Transform thisTransform;
+    protected Transform thisTransform;
     private Vector3 startPosition;
-    private float verticalVelocity;
+    public float verticalVelocity;
 
     private void Start()
     {
@@ -31,21 +31,11 @@ public abstract class Creature : MonoBehaviour
         pos.y = verticalVelocity + startPosition.y;
         thisTransform.position = pos; 
 
-
-
-
-
-
     }
 
-    protected abstract void Talk();
+    public abstract void Talk();
 
-    protected virtual void Jump()
-    {
-        verticalVelocity = 2.0f; 
-    }
-
-
-
+    public abstract void Jump();
+    
 
 }

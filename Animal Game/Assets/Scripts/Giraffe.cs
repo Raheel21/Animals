@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Giraffe : Creature
 {
+    
 
-    protected override void Talk()
+    public override void Talk()
     {
         Debug.Log("I am a Giraffe");
     }
 
+    public override void Jump()
+    {
+        
+            verticalVelocity = 2.0f;
+        
 
-
-
-
-
-
-
-
+    }
 
 
 

@@ -201,7 +201,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3452369}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1160898168}
+        m_MethodName: Talk
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3452369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +407,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 260700692}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1160898168}
+        m_MethodName: Jump
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &260700692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -655,6 +677,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420032}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420034}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -770,6 +793,26 @@ RectTransform:
   m_AnchoredPosition: {x: -6, y: 8.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &519420034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92279c6da16a74fb2bef549ce09729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creatures:
+  - {fileID: 928805640}
+  - {fileID: 1429719594}
+  - {fileID: 740629595}
+  cs:
+  - {fileID: 928805641}
+  - {fileID: 1429719595}
+  - {fileID: 740629596}
 --- !u!1 &556999108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,7 +1121,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 711052656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1160898168}
+        m_MethodName: Talk
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &711052656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,7 +1250,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 739225270}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1160898168}
+        m_MethodName: Talk
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &739225270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1323,9 +1388,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 740629593}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf1ec97ef43f234598a6a9f93aff3f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 86a15319abd398342950a8541a8ea331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalVelocity: 0
 --- !u!1 &928805638
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,9 +1482,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 928805638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 419c26a6467aad74fb5c2034e44d4c4e, type: 3}
+  m_Script: {fileID: 11500000, guid: 58534aaa2b867df4bb30c35e50aba6ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalVelocity: 0
 --- !u!1 &943448993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1652,6 +1719,7 @@ GameObject:
   - component: {fileID: 1160898165}
   - component: {fileID: 1160898167}
   - component: {fileID: 1160898166}
+  - component: {fileID: 1160898168}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1716,6 +1784,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1160898164}
   m_CullTransparentMesh: 0
+--- !u!114 &1160898168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160898164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c92279c6da16a74fb2bef549ce09729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creatures:
+  - {fileID: 928805640}
+  - {fileID: 1429719594}
+  - {fileID: 740629595}
+  cs:
+  - {fileID: 928805641}
+  - {fileID: 1429719595}
+  - {fileID: 740629596}
 --- !u!1 &1247213127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,7 +1885,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1247213130}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1160898168}
+        m_MethodName: Jump
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1247213130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1924,9 +2023,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1429719592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdf1ec97ef43f234598a6a9f93aff3f7, type: 3}
+  m_Script: {fileID: 11500000, guid: f982398de7deb13489268f137e8d7a6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalVelocity: 0
 --- !u!1 &1605148928
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2187,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1658467732}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1160898168}
+        m_MethodName: Jump
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1658467732
 MonoBehaviour:
   m_ObjectHideFlags: 0

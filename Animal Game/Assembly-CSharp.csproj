@@ -62,11 +62,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ControlPanel.cs" />
-    <Compile Include="Assets\Giraffe.cs" />
-    <Compile Include="Assets\Monkey.cs" />
+    <Compile Include="Assets\Scripts\ControlPanel.cs" />
     <Compile Include="Assets\Scripts\Creature.cs" />
     <Compile Include="Assets\Scripts\Elephant.cs" />
+    <Compile Include="Assets\Scripts\Giraffe.cs" />
+    <Compile Include="Assets\Scripts\Monkey.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Aniaml pack\License.txt" />

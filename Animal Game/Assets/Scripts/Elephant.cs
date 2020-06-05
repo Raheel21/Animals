@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class Elephant : Creature
 {
-    protected override void Talk()
+
+
+    public override void Talk()
     {
         
         Debug.Log("I am a Elephant"); 
     }
 
-    protected override void Move()
+    public override void Jump()
     {
-        base.Move();
-        thisTransform.position += Vector3.up * Mathf.Sin(Time.time);
-    }
-
-    protected override void Jump()
-    {
+        
+            verticalVelocity = 2.0f;
         
     }
 
@@ -28,9 +26,11 @@ public class Elephant : Creature
 
 
 
-
-
-
-
+    //i can use below code for bird creature movement 
+    // protected override void Move()
+    // {
+    //   base.Move();
+    //  thisTransform.position += Vector3.up * Mathf.Sin(Time.time);
+    // }
 
 }

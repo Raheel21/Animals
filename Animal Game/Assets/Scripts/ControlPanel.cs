@@ -5,6 +5,30 @@ using UnityEngine;
 public class ControlPanel : MonoBehaviour
 {
     public Transform[] creatures;
+    public Creature[] cs;
+
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            foreach (Creature c in cs)
+            {
+                c.Talk(); 
+            }
+
+
+        }
+
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            foreach(Creature c in cs)
+            {
+
+                c.Jump(); 
+            }
+        }
+
+    }
 
     public void Move(int creatureIndex)
     {
@@ -20,24 +44,5 @@ public class ControlPanel : MonoBehaviour
     {
         creatures[creatureIndex].SendMessage("Jump");
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
